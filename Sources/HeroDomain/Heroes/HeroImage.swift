@@ -27,30 +27,8 @@ public typealias HeroImage = UIImage
 
 extension HeroImage {
     public convenience init?(systemName: String) {
-        self.init(systemSymbolName: systemName, accessibilityDescription: nil)
+        self.init(systemName: systemName)
     }
 }
 #endif
 
-
-//// A platform-independent image.
-//
-//#if os(macOS)
-//import HeroDomain
-//import SwiftUI
-//
-//extension Image {
-//    public init(heroImage: HeroImage) {
-//        self.init(nsImage: heroImage)
-//    }
-//}
-//
-//#elseif os(iOS)
-//import SwiftUI
-//
-//extension Image {
-//    public init(heroImage: HeroImage) {
-//        self.init(uiImage: heroImage)
-//    }
-//}
-//#endif
