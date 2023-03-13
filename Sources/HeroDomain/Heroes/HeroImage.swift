@@ -9,7 +9,6 @@
 
 #if os(macOS)
 import AppKit
-import SwiftUI
 
 public typealias HeroImage = NSImage
 
@@ -21,14 +20,7 @@ extension HeroImage {
 
 #elseif os(iOS)
 import UIKit
-import SwiftUI
 
 public typealias HeroImage = UIImage
-
-extension HeroImage {
-    public convenience init?(systemName: String) {
-        self.init(systemName: systemName)
-    }
-}
 #endif
 
