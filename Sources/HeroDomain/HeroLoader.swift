@@ -16,7 +16,7 @@ final class HeroLoader: HeroService {
     private let defaultIcon: HeroImage
     private let defaultImage: HeroImage
 
-    init(heroRepository: some HeroRepository, filter: @escaping (Hero) -> Bool, openDotaBaseURL: String) {
+    public init(heroRepository: some HeroRepository, filter: @escaping (Hero) -> Bool, openDotaBaseURL: String) {
         guard let defaultIcon = HeroImage(systemName: "person.crop.circle.badge.questionmark"),
               let defaultImage = HeroImage(systemName: "person.fill.questionmark")
         else { fatalError("Could not load system images") }
@@ -31,7 +31,7 @@ final class HeroLoader: HeroService {
         self.defaultImage = defaultImage
     }
 
-    func fetchHeroes() async throws -> [Hero] {
+    public func fetchHeroes() async throws -> [Hero] {
         let rawHeros = try await heroRepository.fetchHeroes()
         let iconURLS = rawHeros.compactMap { $0.iconURL }
         let imagesURLS = rawHeros.compactMap { $0.imageURL }
