@@ -10,31 +10,31 @@ import Foundation
 /// Raw hero data obtained directly from endpoint
 /// Owned by the domain layer
 public struct RawHero: Decodable {
-    let id: Int?
-    let givenName: String?
-    let primaryAttribute: String?
-    let attackType: String?
-    let imageURL: String?
-    let iconURL: String?
-    let roles: [String]?
+    public let id: Int?
+    public let givenName: String?
+    public let primaryAttribute: String?
+    public let attackType: String?
+    public let imageURL: String?
+    public let iconURL: String?
+    public let roles: [String]?
     // Base Stats
-    let health: Int?
-    let healthRegeneration: Double?
-    let mana: Int?
-    let manaRegeneration: Double?
-    let armor: Double?
-    let minAttack: Int?
-    let maxAttack: Int?
-    let strength: Int?
-    let agility: Int?
-    let intelligence: Int?
-    let strengthGain: Double?
-    let agilityGain: Double?
-    let intelligenceGain: Double?
-    let attackRange: Int?
-    let projectileSpeed: Int?
-    let attackRate: Double?
-    let moveSpeed: Int?
+    public let health: Int?
+    public let healthRegeneration: Double?
+    public let mana: Int?
+    public let manaRegeneration: Double?
+    public let armor: Double?
+    public let minAttack: Int?
+    public let maxAttack: Int?
+    public let strength: Int?
+    public let agility: Int?
+    public let intelligence: Int?
+    public let strengthGain: Double?
+    public let agilityGain: Double?
+    public let intelligenceGain: Double?
+    public let attackRange: Int?
+    public let projectileSpeed: Int?
+    public let attackRate: Double?
+    public let moveSpeed: Int?
 }
 
 extension RawHero {

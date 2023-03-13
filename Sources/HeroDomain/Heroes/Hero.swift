@@ -10,13 +10,13 @@ import Foundation
 /// Domain Hero type
 public struct Hero: Identifiable, Hashable {
     public let id: Int
-    let name: String
-    let primaryAttribute: Attribute
-    let attackType: Attack
-    let profileImage: HeroImage
-    let iconImage: HeroImage
-    let roles: [Role]
-    let stats: Stats
+    public let name: String
+    public let primaryAttribute: Attribute
+    public let attackType: Attack
+    public let profileImage: HeroImage
+    public let iconImage: HeroImage
+    public let roles: [Role]
+    public let stats: Stats
 
     /// Primary attribute type
     public enum Attribute: String {
@@ -46,23 +46,23 @@ public struct Hero: Identifiable, Hashable {
 
     /// Base statistics of the Hero
     public struct Stats: Hashable, Equatable {
-        let health: Int
-        let healthRegeneration: Double
-        let mana: Int
-        let manaRegeneration: Double
-        let armor: Double
-        let minAttack: Int
-        let maxAttack: Int
-        let strength: Int
-        let agility: Int
-        let intelligence: Int
-        let strengthGain: Double
-        let agilityGain: Double
-        let intelligenceGain: Double
-        let attackRange: Int
-        let projectileSpeed: Int
-        let attackRate: Double
-        let moveSpeed: Int
+        public let health: Int
+        public let healthRegeneration: Double
+        public let mana: Int
+        public let manaRegeneration: Double
+        public let armor: Double
+        public let minAttack: Int
+        public let maxAttack: Int
+        public let strength: Int
+        public let agility: Int
+        public let intelligence: Int
+        public let strengthGain: Double
+        public let agilityGain: Double
+        public let intelligenceGain: Double
+        public let attackRange: Int
+        public let projectileSpeed: Int
+        public let attackRate: Double
+        public let moveSpeed: Int
     }
 }
 
@@ -83,7 +83,7 @@ extension Hero.Role: Identifiable {
 }
 
 extension Hero {
-    init?(_ rawHero: RawHero, icon: HeroImage, profileImage: HeroImage) {
+    public init?(_ rawHero: RawHero, icon: HeroImage, profileImage: HeroImage) {
         guard let id = rawHero.id,
               let name = rawHero.givenName,
               let primaryAttribute = rawHero.primaryAttribute,
