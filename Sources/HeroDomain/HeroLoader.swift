@@ -8,7 +8,7 @@
 import Foundation
 
 /// This class implements the main abstraction of this module
-final class HeroLoader: HeroService {
+public final class HeroLoader: HeroService {
 
     private let heroRepository: HeroRepository
     private let filter: (Hero) -> Bool
