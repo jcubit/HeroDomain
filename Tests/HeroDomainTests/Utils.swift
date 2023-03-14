@@ -7,7 +7,7 @@
 
 import Foundation
 
-// https://forums.swift.org/t/how-can-i-access-a-file-inside-of-an-xctestcase/53424/5
+// Resource: https://forums.swift.org/t/how-can-i-access-a-file-inside-of-an-xctestcase/53424/5
 
 func fixtureData(for fixture: String) throws -> Data {
     try Data(contentsOf: fixtureUrl(for: fixture))
