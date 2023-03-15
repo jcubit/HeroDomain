@@ -25,6 +25,6 @@ final class HeroTests: XCTestCase {
         XCTAssertEqual(hero.primaryAttribute, Hero.Mock.antimage.primaryAttribute)
         XCTAssertEqual(hero.id, Hero.Mock.antimage.id)
         XCTAssertEqual(hero.roles, Hero.Mock.antimage.roles)
-        XCTAssertEqual(hero.stats, Hero.Mock.antimage.stats)        
+        XCTAssertEqual(hero.stats, Hero.Mock.antimage.stats)
     }
 }

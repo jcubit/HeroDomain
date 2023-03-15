@@ -53,13 +53,13 @@ extension Hero {
                         iconImage: icon!,
                         roles: [.initiator, .durable, .disabler, .carry],
                         stats: Stats(health: 200,
-                                     healthRegeneration: 0.25,
+                                     healthRegeneration: 2.5,
                                      mana: 75,
                                      manaRegeneration: 0,
                                      armor: -1,
-                                     minAttack: 25,
-                                     maxAttack: 30,
-                                     strength: 34,
+                                     minAttack: 30,
+                                     maxAttack: 34,
+                                     strength: 25,
                                      agility: 20,
                                      intelligence: 18,
                                      strengthGain: 2.8,
@@ -104,3 +104,5 @@ extension Hero {
 
     }
 }
+
+

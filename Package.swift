@@ -27,7 +27,8 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "HeroDomainTests",
-            dependencies: ["HeroDomain"]),
+            dependencies: ["HeroDomain"],
+            exclude: ["Fixtures"]),
     ],
     swiftLanguageVersions: [.v5]
 )
