@@ -16,3 +16,8 @@ public protocol HeroService {
     func fetchHeroes() async throws -> [Hero]
 }
 
+/// Fetch errors
+public enum FetchErrors: Error {
+    case invalidServerResponse
+    case unsupportedImage
+}
